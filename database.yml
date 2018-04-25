@@ -1,0 +1,68 @@
+users:
+  Ben:
+    username: Ben
+    articleIds:
+      - 1
+      - 2
+    commentIds: []
+  James:
+    username: James
+    articleIds: []
+    commentIds: []
+  Susan:
+    username: Susan
+    articleIds:
+      - 3
+    commentIds:
+      - 1
+  John:
+    username: John
+    articleIds: []
+    commentIds: []
+articles:
+  '1':
+    id: 1
+    title: Isaac Newton
+    url: 'https://en.wikipedia.org/wiki/Isaac_Newton'
+    username: Ben
+    commentIds: []
+    upvotedBy:
+      - Ben
+      - John
+    downvotedBy:
+      - James
+  '2':
+    id: 2
+    title: Galileo
+    url: 'https://en.wikipedia.org/wiki/Galileo_Galilei'
+    username: Ben
+    commentIds: []
+    upvotedBy:
+      - James
+      - Ben
+    downvotedBy: []
+  '3':
+    id: 3
+    title: Albert Einstein
+    url: 'https://en.wikipedia.org/wiki/Albert_Einstein'
+    username: Susan
+    commentIds:
+      - 1
+    upvotedBy:
+      - Susan
+      - Ben
+      - John
+    downvotedBy: []
+    comments:
+      - &ref_0
+        id: 1
+        body: Smart dude!
+        username: Susan
+        articleId: 3
+        upvotedBy:
+          - John
+        downvotedBy: []
+nextArticleId: 4
+comments:
+  '1': *ref_0
+nextCommentId: 2
